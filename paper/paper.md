@@ -80,8 +80,18 @@ authors_short: Abbassi-Daloii, T., Gadiya, Y. \emph{et al.}
 # Fatilitate the addition of new annotators to pyBiodatafuse (@tabbassidaloii)
 Project #14
 
+```mermaid
+graph TD
+    A[Run VoID generator on RDF file or endpoint] --> B[Change directory to rdf_config in this repository]
+    B --> |docker compose up -d to start Virtuoso instance and load dataset| C[Create a SHACL Prefix Set and upload to the triplestore]
+    C --> |run *serve_rdf_config.sh* and access 0.0.0.0:8000/sparql/test-rdf-config.html| D[Generate RDF Config Files, point to localhost:8899/sparql]
+    D --> |run *rdf-config --config . --senbero*| E[Retrieve tree structure]
+    D --> |run *rdf-config --config . --schema > schema.svg*| F[Generate SVG diagram]
+```
+
 # Using LLM to query BDF knowledge graph (@jmillanacosta)
 Project #4, 
+- concept:
 
 # Improvement in the pyBiodatafuse (@tabbassidaloii)
 - adding the version to data extracted from IDSM
@@ -89,12 +99,13 @@ Project #4,
 - 
 # Discussion (@tabbassidaloii)
 - standard data models 
-# Aligning with other projects
 
 
 # Future works
 - learning from project #2, we will explore annotating the output knowledge graph with the [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)
 - Support VCF (project 35)
+- LLM integration to generate SPARQL queries from natural language (Project #4)
+
 
 ## Acknowledgements
 
