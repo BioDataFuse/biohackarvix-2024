@@ -8,7 +8,7 @@ tags:
 authors:
   - name: Javier Millan Acosta
     orcid: 0000-0002-4166-7093
-    affiliation: 2
+    affiliation: 1
   - name: Shuichi Kawashima
     orcid: 0000-0001-7883-3756
     affiliation: 
