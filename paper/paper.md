@@ -117,7 +117,7 @@ As part of ongoing efforts to enhance BioDataFuse, some improvements were made d
 
 - **Orphanet annotator**: In collaboration with David Lagorce (Orphanet), we aim to develop a specialized annotator for integrating Orphanet data within BioDataFuse.
 
-- **SPARQL-API for Annotators**: Leverage the `sparql-void-to-python` package created by Vincent Emonet and Jerven Bolleman (Project #14) to streamline the creation of new BioDataFuse annotators, facilitating the incorporation of diverse RDF data sources.
+- **SPARQL-API for annotators**: Leverage the `sparql-void-to-python` package created by Vincent Emonet and Jerven Bolleman (Project #14) to streamline the creation of new BioDataFuse annotators, facilitating the incorporation of diverse RDF data sources.
 
 - **VCF file support and variant entity expansion**: Extend BioDataFuse to support variant entities through VCF file integration. This will be explored in collaboration with Sarang Bhutada, Vibhor Gupta (Project #32), and Alexandrina Bodrug, enriching BioDataFuse’s handling of variant data.
 
