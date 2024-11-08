@@ -10,7 +10,7 @@ authors:
     orchid: 0000-0002-7683-0452
     affiliation: 1
   - name: Javier Millan Acosta
-    orcid: 
+    orcid: 0000-0002-4166-7093
     affiliation: 2
   - name: Jerven Bolleman
     orcid: 
@@ -56,10 +56,10 @@ authors_short: Abbassi-Daloii, T., Gadiya, Y. \emph{et al.}
 # Introduction
 
 
-# Goals for the biohackathon
+# Goals for the biohackathon (@tabbassidaloii)
 - 
 
-# Comparision of schema extractor tools
+# Comparision of schema extractor tools (@YojanaGadiya)
 
 ## Table 1. Overview of tools compared during the hacking week
 
@@ -77,25 +77,24 @@ authors_short: Abbassi-Daloii, T., Gadiya, Y. \emph{et al.}
 | **Compiler** | Java-based; Native binary | Ruby-based | Python-based |
 | **Limitation** | Quadratic runtime for generating files (e.g., IDSM, OrthoDB) | Not applicable for shape classes (e.g., Rhea) | Requires manual curation of input (Solution: integrate with VoID generators for curation) |
 
-# Fatilitate the addition of new annotators to pyBiodatafuse
+# Fatilitate the addition of new annotators to pyBiodatafuse (@tabbassidaloii)
 Project #14
 
-# Using LLM to query BDF knowledge graph
-Project #4
+# Using LLM to query BDF knowledge graph (@jmillanacosta)
+Project #4, 
 
-# Improvement in the pyBiodatafuse
+# Improvement in the pyBiodatafuse (@tabbassidaloii)
 - adding the version to data extracted from IDSM
 - improving the Bgee query
 - 
-# Discussion
-
+# Discussion (@tabbassidaloii)
+- standard data models 
 # Aligning with other projects
-Project #2 (
-- 
+
 
 # Future works
 - learning from project #2, we will explore annotating the output knowledge graph with the [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)
-
+- Support VCF (project 35)
 
 ## Acknowledgements
 
