@@ -57,7 +57,12 @@ authors_short: Abbassi-Daloii, T., Gadiya, Y. \emph{et al.}
 
 
 # Goals for the biohackathon (@tabbassidaloii)
-- 
+One of the main aims of our project was to enhance FAIR data integration by clarifying and transforming graph schemas. To achieve this we defined the tasks below
+- Comparison and documentation of the synergies among different tools for extracting data models: RDF-Config, VoID generator and sheXer.
+- Translate schemas into annotators to enable future automation.
+We also wanted to improve the BioDataFuse [**ref**] functionality through:
+- Expand the data model of BioDataFuse using resources from the RDF Portal.
+- Integrate the output graph with LLM models.
 
 # Comparision of schema extractor tools (@YojanaGadiya)
 
