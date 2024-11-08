@@ -6,12 +6,15 @@ tags:
   - Modular query
   - Biomedical data source
 authors:
-  - name: Yojana Gadiya*
-    orchid: 0000-0002-7683-0452
-    affiliation: 1
   - name: Javier Millan Acosta
     orcid: 0000-0002-4166-7093
     affiliation: 2
+  - name: Shuichi Kawashima
+    orcid: 0000-0001-7883-3756
+    affiliation: 
+  - name: Toshiaki Katayama
+    orcid: 	ktym@dbcls.jp	ktym
+    affiliation:
   - name: Jerven Bolleman
     orcid: 
     affiliation: 
@@ -21,20 +24,17 @@ authors:
   - name: Harald Detering
     orcid: 0000-0002-0134-7618
     affiliation: 
-  - name: Shuichi Kawashima
-    orcid: 0000-0001-7883-3756
-    affiliation: 
-  - name: Toshiaki Katayama
-    orcid: 	ktym@dbcls.jp	ktym
-    affiliation: 
+  - name: Yojana Gadiya*
+    orchid: 0000-0002-7683-0452
+    affiliation: 4
   - name: Tooba Abbassi-Daloii*
     orcid: 0000-0002-4904-3269
-    affiliation: 2
+    affiliation: 1
 affiliations:
-  - name: Fraunhofer Institute for Translational Medicine and Pharmacology, Germany
-    index: 1
   - name: Department of Translational Genomics, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, the Netherlands; 
-    index: 2
+    index: 1
+  - name: Fraunhofer Institute for Translational Medicine and Pharmacology, Germany
+    index: 4
 date: XX November 2024
 cito-bibliography: paper.bib
 event: BH24EU
