@@ -101,22 +101,31 @@ graph TD
     D --> |run *rdf-config --config . --schema > schema.svg*| F[Generate SVG diagram]
 ```
 
-# Improvement in the pyBiodatafuse (@tabbassidaloii)
-- adding the version to data extracted from IDSM
-- improving the Bgee query
-- 
-# Discussion (@tabbassidaloii)
-- standard data models 
+# Improvement of pyBiodatafuse
+As part of ongoing efforts to enhance BioDataFuse, some improvements were made during the week:
+- **Versioning of IDSM**: Added versioning to the data extracted from IDSM for better traceability and consistency.
+- **Optimized Bgee queries**: Improved the efficiency of Bgee queries, reducing query time and enhancing overall performance.
+
+# RDF-Portal to GraphQL (Toshiaki)
+
+# Discussion
+- discussion with Toshiaki
 
 
-# Future works
-- learning from project #2, we will explore annotating the output knowledge graph with the [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html)
-- Support VCF (project 35)
-- LLM integration to generate SPARQL queries from natural language (Project #4)
+# Future Work
+- **Croissant schema annotation**: Building on insights from Núria Queralt Rosinach (Project #2), we will explore annotating BioDataFuse’s output knowledge graph with the [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html), enhancing data standardization and downstream data analysis.
 
+- **Orphanet annotator**: In collaboration with David Lagorce (Orphanet), we aim to develop a specialized annotator for integrating Orphanet data within BioDataFuse.
+
+- **SPARQL-API for Annotators**: Leverage the `sparql-void-to-python` package created by Vincent Emonet and Jerven Bolleman (Project #14) to streamline the creation of new BioDataFuse annotators, facilitating the incorporation of diverse RDF data sources.
+
+- **VCF file support and variant entity expansion**: Extend BioDataFuse to support variant entities through VCF file integration. This will be explored in collaboration with Sarang Bhutada, Vibhor Gupta (Project #32), and Alexandrina Bodrug, enriching BioDataFuse’s handling of variant data.
+
+- **Usecase with Bgee**: Collaborate with Harald Detering (Bgee) to create a use case demonstrating how Bgee gene expression values can be used in spcific research setup.
+
+- **LLM integration**: Strengthen the integration of Large Language Models (LLMs) with BioDataFuse by collaborating with Tarcisio Mendes De Farias (Project #4) to enhance knowledge graph interpretability and usability for a wider range of applications.
 
 ## Acknowledgements
-
-This work was supported by ELIXIR, the research infrastructure for life-science data. We thank the organizers of the BioHackathon Europe 2024 for providing travel support for the project leads.
+This work was supported by ELIXIR, the European research infrastructure for life-science data. We would also like to express our gratitude to the organizers of BioHackathon Europe 2024 for providing travel support for one of the project leads and a participant.
 
 ## References
