@@ -53,14 +53,15 @@ authors_short: Abbassi-Daloii, T., Gadiya, Y. \emph{et al.}
 
 #### * These authors contributed equally to this work
 
-# Introduction
+# Introduction (@tabbassidaloii)
+The integration of life science data from different biomedical resources has been a major challenge attributed to fragmented data sources, the use of multiple data formats, and the existence of multiple ontologies for a single context among others. To address this problem, we launched the [BioDataFuse (BDF) project](https://biodatafuse.org) [@AuthorSelfCitation:biodatafuse2023], which employs a modular framework for integrating data from different sources into context-specific knowledge graphs. Through this project, we have currently been able to integrate and harmonise data from ten databases. However, the integration of such resources requires a detailed understanding of underlying graph schemas. 
+In this biohackathon, we aimed to streamline the data integration process such that any FAIR-compliant biological database can be easily converted to a graph. This robust process would involve two steps: first, understanding of the underlying graph schemas of data resources using the RDF-config (https://github.com/dbcls/rdf-config/) and VoID generator (https://github.com/JervenBolleman/void-generator) and second, the conversion of graph data into multiple compatible formats for improving accessibility and usability using G2G Mapper (https://g2gml.readthedocs.io/), LinkML (https://linkml.io/) and BDF (https://github.com/BioDataFuse/pyBiodatafuse). Moreover, we would test the resilience of the process by demonstrating the ease-of-integration of multiple data sources within the RDF Portal (https://rdfportal.org) and beyond. Through this test, we would essentially attract database owners to include additional biomedical data sources in BDF, thus expanding the applicability of their resource beyond the “yet-another-resource” paradigm.
 
-
-# Goals for the biohackathon (@tabbassidaloii)
+## Goals for the biohackathon (@tabbassidaloii)
 One of the main aims of our project was to enhance FAIR data integration by clarifying and transforming graph schemas. To achieve this we defined the tasks below
 - Comparison and documentation of the synergies among different tools for extracting data models: RDF-Config, VoID generator and sheXer.
 - Translate schemas into annotators to enable future automation.
-We also wanted to improve the BioDataFuse [**ref**] functionality through:
+We also wanted to improve the BioDataFuse functionality through:
 - Expand the data model of BioDataFuse using resources from the RDF Portal.
 - Integrate the output graph with LLM models.
 
@@ -85,6 +86,11 @@ We also wanted to improve the BioDataFuse [**ref**] functionality through:
 # Fatilitate the addition of new annotators to pyBiodatafuse (@tabbassidaloii)
 Project #14
 
+
+# Using LLM to query BDF knowledge graph (@jmillanacosta)
+Project #4, 
+- concept:
+
 ```mermaid
 graph TD
     A[Run VoID generator on RDF file or endpoint] --> B[Change directory to rdf_config in this repository]
@@ -93,10 +99,6 @@ graph TD
     D --> |run *rdf-config --config . --senbero*| E[Retrieve tree structure]
     D --> |run *rdf-config --config . --schema > schema.svg*| F[Generate SVG diagram]
 ```
-
-# Using LLM to query BDF knowledge graph (@jmillanacosta)
-Project #4, 
-- concept:
 
 # Improvement in the pyBiodatafuse (@tabbassidaloii)
 - adding the version to data extracted from IDSM
