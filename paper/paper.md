@@ -127,7 +127,7 @@ graph TD
     D --> |run *rdf-config --config . --schema > schema.svg*| F[Generate SVG diagram]
 ```
 
-## Evaluating scope of GraphQL interface for RDF-Portal (@Toshiaki) 
+## Evaluating the scope of GraphQL interface for RDF Portal (@Toshiaki) 
 
 Add info here on work done
 
@@ -145,31 +145,33 @@ As part of ongoing efforts to enhance BioDataFuse, some improvements were made d
 
 
 # Discussion
-- to add points to the discussion with Toshiaki here
-
+@Toshiaki please review:
+- The importance of defining a standard format for identifiers
+- Creating a community of experts in data schema modeling to explore and define best practices and standards when creating interoperable and widely applicable data models
+- Adding descriptions to classes and properties in a data schema model improves accurate interpretation of the schema 
 
 # Future Work
-With the successful building and understanding of schema alongside cross-project overlaps, we identified a number of future work plan.
+With the successful building and understanding of schema alongside cross-project overlaps, we identified a number of future work plans.
 
 ### Ingesting more data in BDF
 
-- **Orphanet annotator**: In collaboration with [David Lagorce]() (Orphanet), we aim to develop a specialized annotator for integrating Orphanet data within BDF.
+- **Orphanet annotator**: In collaboration with [David Lagorce]() ([Orphanet](https://www.orpha.net/)), we aim to develop a specialized annotator for integrating the Orphanet data within BDF.
 
 - **VCF file support and variant entity expansion**: Extend BioDataFuse to support variant entities through VCF file integration. This will be explored in collaboration with [Sarang Bhutada]() and [Vibhor Gupta]() (Project #32), and [Alexandrina Bodrug](), enriching BioDataFuse’s handling of variant data.
 
-- **SPARQL-API for annotators**: Leverage the `sparql-void-to-python` package created by Vincent Emonet and Jerven Bolleman (Project #14) to streamline the creation of new BioDataFuse annotators, facilitating the incorporation of diverse RDF data sources.
+- **SPARQL-API for annotators**: Leverage the `sparql-void-to-python` package created by [Vincent Emonet]() and Jerven Bolleman (Project #14) to streamline the creation of new BioDataFuse annotators, facilitating the incorporation of diverse RDF data sources.
 
-- **Usecase with Bgee**: Collaborate with Harald Detering (Bgee) to create a use case demonstrating how Bgee gene expression values can be used in spcific research setup.
+- **Usecase with Bgee**: Collaborate with Harald Detering (Bgee) to create a use case demonstrating how Bgee gene expression values can be used in a specific research setup.
 
 ### Integration with ML models
 
-- **Croissant schema annotation**: Building on insights from [Núria Queralt Rosinach]() (Project #2), we will explore converting and adapting BDF output knowledge graph with the [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html), enhancing data standardization and downstream data analysis with ML tools from Huggingface.
+- **Croissant schema annotation**: Building on insights from [Núria Queralt Rosinach]() (Project #2), we will explore converting and adapting the BDF output knowledge graph with the [Croissant schema](https://docs.mlcommons.org/croissant/docs/croissant-spec.html), enhancing data standardization and downstream data analysis with ML tools from Huggingface.
 
-- **LLM integration**: By collaborating with [Tarcisio Mendes De Farias]() (Project #4) to enhance knowledge graph interpretability and usability for a wider range of applications with LLM. Specifically, converting natural language to SPARQL queries for the context specific BDF graph, allowing a chatbot plugin on our graph. 
+- **LLM integration**: By collaborating with [Tarcisio Mendes De Farias]() (Project #4) to enhance knowledge graph interpretability and usability for a wider range of applications with LLM. Specifically, converting natural language to SPARQL queries for the context-specific BDF graph, allowing a chatbot plugin on our graph. 
 
 ### Integration with RDF-Portal
 
-- **Using GraphQL interface**: Being the downstream users of the GraphQL interface, we would collaborate with [Toshiaki Katayama]() and [Shuichi Kawashima]() to explore opportunities to build annotators in BDF for RDF-Portal.
+- **Using GraphQL interface**: Being the downstream users of the GraphQL interface, we would collaborate with [Toshiaki Katayama]() and [Shuichi Kawashima]() to explore opportunities to build annotators in BDF for RDF Portal.
 
 ## Acknowledgements
 This work was supported by ELIXIR, the European research infrastructure for life-science data. We would also like to express our gratitude to the organizers of BioHackathon Europe 2024 for providing travel support for one of the project leads and a participant.
