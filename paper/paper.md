@@ -3,10 +3,10 @@ title: 'BioHackEU24 report: Expanding FAIR database integration through elucidat
 title_short: 'BioHackEU24 #18: Graph schemas'
 tags:
   - Knowledge Graph
-  - Modular query
+  - Graph schema
   - Biomedical data source
   - BioDataFuse
-  - RDF-Portal
+  - RDF Portal
 authors:
   - name: Javier Millan Acosta
     orcid: 0000-0002-4166-7093
@@ -58,7 +58,7 @@ authors_short: Abbassi-Daloii, T., Gadiya, Y. \emph{et al.}
 # Introduction
 The integration of life science data across diverse biomedical resources remains a significant challenge, due to fragmented data sources, varying data formats, and the use of multiple ontologies to describe similar contexts. To address these issues, we launched the [BioDataFuse (BDF) project](https://biodatafuse.org) [@AuthorSelfCitation:biodatafuse2023], which applies a modular framework to harmonize and integrate data from various sources into context-specific knowledge graphs. To date, the BDF project has successfully integrated and harmonized data from ten databases, demonstrating the effectiveness of BDF's modular approach in creating unified and interoperable datasets.
 
-However, achieving this level of integration requires a deep understanding of the underlying graph schemas from each data source. In this biohackathon, our goal was to further refine and streamline the data integration process, aiming to make it more seamless, adaptable, automatized, and FAIR-compliant. By creating a robust approach, we envision that any biological database adhering to FAIR principles could be readily integrated into the BDF framework and contribute to a unified data ecosystem.
+However, achieving this level of integration requires a deep understanding of the underlying graph schemas from each data source. In this biohackathon, our goal was to refine further and streamline the data integration process, aiming to make it more seamless, adaptable, automatized, and FAIR-compliant. By creating a robust approach, we envision that any biological database adhering to FAIR principles could be readily integrated into the BDF framework and contribute to a unified data ecosystem.
 
 ## Goals for the biohackathon
 Our main objective for this biohackathon was to enhance FAIR data integration by clarifying and transforming graph schemas. To achieve this, we outlined the following tasks:
@@ -72,18 +72,18 @@ We also aimed to extend the capabilities of BioDataFuse by:
 # Comparative study of schema extractor tools
 
 ## Selection of schema extract tools
-A number of data schema extractors exists. In this biohackathon, we looked at three such extraction tools: VoID-generator, RDF-Config, and sheXer **(Figure 1)**.
+A number of data schema extractors exist. In this biohackathon, we looked at three such extraction tools: VoID-generator, RDF-Config, and sheXer **(Figure 1)**.
 
-* [VoID-generator](https://github.com/JervenBolleman/void-generator): The tool enables the generation of [Vocabulary of Interlinked Datasets (VoID)](https://www.w3.org/TR/void/) files from an RDF turtle file. VoID is a metadata expression language for RDF graphs and allows for efficiently describing the distribution of data elements and their links in an RDF graph. Hence, by generating such VoID files, the VoID-generator tool enabled making the data and metadata around the graphs discoverable and interoperable.
+* [VoID-generator](https://github.com/JervenBolleman/void-generator): The tool enables the generation of [Vocabulary of Interlinked Datasets (VoID)](https://www.w3.org/TR/void/) files from an RDF turtle file or a SPARQL endpoint. VoID is a metadata expression language for RDF graphs and allows for efficiently describing the distribution of data elements and their links in an RDF graph. Hence, by generating such VoID files, the VoID-generator tool enabled making the data and metadata around the graphs discoverable and interoperable.
 
-* [RDF-Config](https://github.com/dbcls/rdf-config): It is a tool to visualize the RDF data structure in human-readable format based on high quality manual curation of underlying data models. This tool enabled making a structured representation of the underlying graph, thus allowing for RDF data management across resource.
+* [RDF-Config](https://github.com/dbcls/rdf-config): It is a tool to visualize the RDF data structure in a human-readable format based on high quality manual curation of underlying data models. This tool enables making a structured representation of the underlying graph, thus allowing for RDF data management across resources.
 
-* [sheXer](https://github.com/DaniFdezAlvarez/shexer): It is a library to automatic extract of [shape expressions (ShEx)](https://shex.io/) or [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/) for an RDF graph. ShEx is a schema language, while SHACL is W3C standard for describing an RDF graph. SheXer as a tool enables quality assurance of the underlying graph by checking compliance with pre-defined set of rules and constraints.
+* [sheXer](https://github.com/DaniFdezAlvarez/shexer): It is a library to automatic extract of [shape expressions (ShEx)](https://shex.io/) or [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/) for an RDF graph. ShEx is a schema language, while SHACL is a W3C standard for describing an RDF graph. SheXer as a tool enables quality assurance of the underlying graph by checking compliance with a pre-defined set of rules and constraints.
 
 ![Data model overview](../images/Dataschemas-biohack24.png)
 <center>
 
-**Figure 1: Understanding the utility of different.** Here we focused on VoID-generator, RDF-Config, and sheXer with their conversion from the RDF resource directly into a data model. Additionally, we found a tool to convert the VoID file to RDF-Config compliant files for data modelling. 
+**Figure 1: Understanding the utility of different.** Here we focused on VoID-generator, RDF-Config, and sheXer with their conversion directly from the RDF resource into a data model. Additionally, we used a tool to convert the VoID file to RDF-Config compliant files for data modeling. 
 
 </center>
 
@@ -105,14 +105,14 @@ A number of data schema extractors exists. In this biohackathon, we looked at th
 
 ## Utilizing the schema tools
 
-As shown in **Table 1**, each of the data schema tools are written in different programming languages. To enable easy use of these tool with minimal interpreter changes, we built a docker environment and a detailed step-by-step documentation on the utility of these tools with a locally deployed graph. The documentation is available on [Github](https://github.com/BioDataFuse/elixir_biohackathon_2024/tree/main/void2rdf-config#readme) and discussed in detail in the later sections.
+As shown in **Table 1**, each of the data schema tools is written in different programming languages. To enable easy use of these tools with minimal interpreter changes, we built a docker environment and detailed step-by-step documentation on the utility of these tools with a locally deployed graph. The documentation is available on [Github](https://github.com/BioDataFuse/elixir_biohackathon_2024/tree/main/void2rdf-config#readme) and discussed in detail in the later sections.
 
 # Facilitating the addition of new annotators to *pyBiodatafuse*
 
 ## Semi-automating annotation building with data schemas
 To extend [pyBiodatafuse](https://github.com/BioDataFuse/pyBiodatafuse.git)’s functionality and support ongoing alignment with related projects, we identified a valuable integration opportunity with [**Biohackathon Project #14**](). This project discussed the generation of a tool named [sparql-void-to-python tool](https://github.com/TRIPLE-CHIST-ERA/sparql-void-to-python.git) which utilizes the VoID file to automatically generate Python APIs that include all classes and properties within an RDF database.
 
-Building on this capability, we developed a "generic" template that enables the streamlined addition of new annotators to *pyBiodatafuse* **(Code 1)**. This template leverages on information provided by the Python API from sparql-void-to-python tool to facilitate the creation of database-specific annotators directly within the BDF framework. By adopting this approach, we anticipate simplifying and fast onboarding the integration of new RDF databases into BDF, making the process more efficient and consistent across different data sources.
+Building on this capability, we developed a "generic" template that enables the streamlined addition of new annotators to *pyBiodatafuse* **(Code 1)**. This template leverages information provided by the Python API from the sparql-void-to-python tool to facilitate the creation of database-specific annotators directly within the BDF framework. By adopting this approach, we anticipate simplifying and fast onboarding the integration of new RDF databases into BDF, making the process more efficient and consistent across different data sources.
 
 ```python
 import datetime
