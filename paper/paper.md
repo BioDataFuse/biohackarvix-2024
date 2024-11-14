@@ -369,13 +369,12 @@ As part of ongoing efforts to enhance BioDataFuse, some improvements were made d
 - **Versioning of IDSM**: With discussion with IDSM developers, we were able to extract and add versioning to the data extracted from this endpoint for better traceability and consistency.
 - **Optimized Bgee queries**: With SPARQL experts and Bgee developers, we were able to improve the efficiency of Bgee queries, reducing the query time significantly and enhancing overall performance.
 - **Validation of BDF graph**: With data schema tools, we were able to quality check the BDF graph schema and assess the overall quality of our generated RDF graph.
-- **Validation of BDF graph**: With data schema tools, we were able to quality check the BDF graph schema and assess the overall quality of our generated RDF graph.
 
 # Improvement of *RDF-Portal* (@Toshiaki and @Shuichi)
 
 
 # Discussion
-- to add points on the discussion with Toshiaki here
+- to add points to the discussion with Toshiaki here
 
 
 # Future Work
