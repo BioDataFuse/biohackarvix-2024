@@ -88,20 +88,19 @@ A number of data schema extractors exist. In this biohackathon, we looked at thr
 </center>
 
 ## Table 1. Pros and Cons of the schema tools
-
 |  | [VoID generator](https://github.com/JervenBolleman/void-generator) | [RDF-Config](https://github.com/JervenBolleman/void-generator) | [sheXer](https://github.com/JervenBolleman/void-generator) |
 |---|---|---|---|
 | **Overview of the tool** | Extracts statistics from an RDF endpoint or file | Automates SPARQL and schema generation; creates a GraphQL instance of an RDF graph | Extracts ShEx and SHACL structure from an RDF graph; ensure quality assurance and rule compliance of a graph | 
 | **Documentation** | [Incomplete](https://github.com/JervenBolleman/void-generator/blob/main/Tutorial.md) | [Present](https://github.com/JervenBolleman/void-generator/blob/main/Tutorial.md) | [Present](https://github.com/DaniFdezAlvarez/shexer/blob/master/README.md) |
 | **Minimal requirement** | Requires an RDF file or SPARQL endpoint; Graph must have triples with `rdf:type` predicates | Requires `Model.yaml` and `Prefix.yaml` files | Requires a Turtle file |
-| **Data model representation** | Object class-based file detailing all classes and properties | SVG tree structure representing classes and properties | PNG image of classes and properties |
-| **Process** | Automated | Semi-automated | Automated |
+| **Data model representation** | Object class-based file detailing all classes and properties | SVG tree structure representing classes and properties | A SHACL or ShEX graph, optionally a UML diagram in PNG representing the shape graph |
+| **Process** | Automated | Semi-automated | Automated, and optionally one can change the threshold used to accept patterns in the graph as shapes and I/O settings |
 | **Interpretability of schema representation** | Difficult; requires programming knowledge to understand organization of classes and properties | Easy; human-readable terms make the tree structure representation easily understandable | Easy; graphical representation facilitates quick interpretation |
-| **Ontology representation in schema** | Human-readable terms (mapping ontology to labels); more compatible with programming language formats | Human-readable terms | Uses ontology identifiers, making readability difficult |
+| **Ontology representation in schema** | Human-readable terms (mapping ontology to labels); more compatible with programming language formats | Human-readable terms | The diagrams and graphs are rendered with their URIs and no labels, difficulting interpretability |
 | **Error logging** | Errors are not easily readable | Errors are not easily readable or vague error logs | Errors are not readable or understandable; large images may be truncated |
 | **Error reporting** | Through Git issues | Through Git issues | Through Git issues |
 | **Compiler** | Java (Native binary) | Ruby | Python |
-| **Limitation** | Quadratic runtime for generating files (e.g., [IDSM](https://idsm.elixir-czech.cz/), [OrthoDB](https://www.orthodb.org/)); Not applicable for shape subclasses (e.g., In [Rhea](https://www.rhea-db.org/), where compounds are sub-classified into products, reactants, etc.) | Requires manual curation of input (Potential solution: integrate with VoID generators for semi-automation) |
+| **Limitation** | Quadratic runtime for generating files (e.g., [IDSM](https://idsm.elixir-czech.cz/), [OrthoDB](https://www.orthodb.org/)); Not applicable for shape subclasses (e.g., In [Rhea](https://www.rhea-db.org/), where compounds are sub-classified into products, reactants, etc.) | Requires manual curation of input (Potential solution: integrate with VoID generators for semi-automation) | Some unexpected results |
 
 ## Utilizing the schema tools
 
@@ -114,18 +113,10 @@ To extend [pyBiodatafuse](https://github.com/BioDataFuse/pyBiodatafuse.git)’s 
 
 Building on this capability, we developed a "generic" template that enables the streamlined addition of new annotators to *pyBiodatafuse* (available on [Github](https://github.com/BioDataFuse/pyBiodatafuse/blob/main/src/pyBiodatafuse/annotators/rdf_annotator_template.py)). This template leverages information provided by the Python API from the sparql-void-to-python tool to facilitate the creation of database-specific annotators directly within the BDF framework. By adopting this approach, we anticipate simplifying and fast onboarding the integration of new RDF databases into BDF, making the process more efficient and consistent across different data sources.
 
-# Using LLM to query BDF knowledge graph (@jmillanacosta)
-Project #4, 
-- concept:
 
-```mermaid
-graph TD
-    A[Run VoID generator on RDF file or endpoint] --> B[Change directory to rdf_config in this repository]
-    B --> |docker compose up -d to start Virtuoso instance and load dataset| C[Create a SHACL Prefix Set and upload to the triplestore]
-    C --> |run *serve_rdf_config.sh* and access 0.0.0.0:8000/sparql/test-rdf-config.html| D[Generate RDF Config Files, point to localhost:8899/sparql]
-    D --> |run *rdf-config --config . --senbero*| E[Retrieve tree structure]
-    D --> |run *rdf-config --config . --schema > schema.svg*| F[Generate SVG diagram]
-```
+# Using LLM to query a BDF knowledge graph (@jmillanacosta)
+Project #4 identified the potential of using custom LLMs, fine-tuned to generate SPARQL queries for open data endpoints, as a means to bridge the gap between data consumers and RDF datasets. In order to reduce errors, produce better queries and ensure compatibility with each database schema, the models can be fine-tuned with the shapes or schemas of these databases in SHACL or ShEx format, as well as with sets of SPARQL-natural language queries.  # Not a lot more to say here...
+
 
 ## Evaluating the scope of GraphQL interface for RDF Portal (@Toshiaki) 
 
@@ -139,7 +130,7 @@ Overall, the capability to integrate the GraphQL to RDF-Portal opens several opp
 As part of ongoing efforts to enhance BioDataFuse, some improvements were made during the week:
 - **Versioning of IDSM**: With discussion with IDSM developers, we were able to extract and add versioning to the data extracted from this endpoint for better traceability and consistency.
 - **Optimized Bgee queries**: With SPARQL experts and Bgee developers, we were able to improve the efficiency of Bgee queries, reducing the query time significantly and enhancing overall performance.
-- **Validation of BDF graph**: With data schema tools, we were able to quality check the BDF graph schema and assess the overall quality of our generated RDF graph.
+- **Validation of BDF graph**: With data schema tools, we were able to quality check the BDF graph schema and assess the overall quality of our generated RDF graph. The current implementation of the `BDFGraph()` class wraps `shexer` methods to generate both ShEx and SHACL graphs representing its schema, as showcased in the [example workflow notebook](). #@jmillanacosta
 
 # Improvement of *RDF-Portal* (@Toshiaki and @Shuichi)
 
