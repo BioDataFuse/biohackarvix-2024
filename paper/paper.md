@@ -114,7 +114,7 @@ To extend [pyBiodatafuse](https://github.com/BioDataFuse/pyBiodatafuse.git)’s 
 Building on this capability, we developed a "generic" template that enables the streamlined addition of new annotators to *pyBiodatafuse* (available on [Github](https://github.com/BioDataFuse/pyBiodatafuse/blob/main/src/pyBiodatafuse/annotators/rdf_annotator_template.py)). This template leverages information provided by the Python API from the sparql-void-to-python tool to facilitate the creation of database-specific annotators directly within the BDF framework. By adopting this approach, we anticipate simplifying and fast onboarding the integration of new RDF databases into BDF, making the process more efficient and consistent across different data sources.
 
 
-# Using LLM to query a BDF knowledge graph (@jmillanacosta)
+# Using LLM to query a BDF knowledge graph 
 Project #4 identified the potential of using custom LLMs, fine-tuned to generate SPARQL queries for open data endpoints, as a means to bridge the gap between data consumers and RDF datasets. In order to reduce errors, produce better queries and ensure compatibility with each database schema, the models can be fine-tuned with the shapes or schemas of these databases in SHACL or ShEx format, as well as with sets of SPARQL-natural language queries.  # Not a lot more to say here...
 
 
@@ -130,7 +130,7 @@ Overall, the capability to integrate the GraphQL to RDF-Portal opens several opp
 As part of ongoing efforts to enhance BioDataFuse, some improvements were made during the week:
 - **Versioning of IDSM**: With discussion with IDSM developers, we were able to extract and add versioning to the data extracted from this endpoint for better traceability and consistency.
 - **Optimized Bgee queries**: With SPARQL experts and Bgee developers, we were able to improve the efficiency of Bgee queries, reducing the query time significantly and enhancing overall performance.
-- **Validation of BDF graph**: With data schema tools, we were able to quality check the BDF graph schema and assess the overall quality of our generated RDF graph. The current implementation of the `BDFGraph()` class wraps `shexer` methods to generate both ShEx and SHACL graphs representing its schema, as showcased in the [example workflow notebook](). #@jmillanacosta
+- **Validation of BDF graph**: With data schema tools, we were able to quality check the BDF graph schema and assess the overall quality of our generated RDF graph. The current implementation of the `BDFGraph()` class wraps `shexer` methods to generate both ShEx and SHACL graphs representing its schema, as showcased in the [example workflow notebook](). 
 
 # Improvement of *RDF-Portal* (@Toshiaki and @Shuichi)
 
