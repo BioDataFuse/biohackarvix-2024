@@ -97,7 +97,7 @@ A number of data schema extractors exist. In this biohackathon, we looked at thr
 | **Process** | Automated | Semi-automated | Automated, and optionally one can change the threshold used to accept patterns in the graph as shapes and I/O settings |
 | **Interpretability of schema representation** | Difficult; requires programming knowledge to understand organization of classes and properties | Easy; human-readable terms make the tree structure representation easily understandable | Easy; graphical representation facilitates quick interpretation |
 | **Ontology representation in schema** | Human-readable terms (mapping ontology to labels); more compatible with programming language formats | Human-readable terms | The diagrams and graphs are rendered with their URIs and no labels, difficulting interpretability |
-| **Error logging** | Errors are not easily readable | Errors are not easily readable or vague error logs | Errors are not readable or understandable; large images may be truncated |
+| **Error logging** | Errors are not easily readable | Errors are not easily readable or vague error logs | Errors are not readable or understandable |
 | **Error reporting** | Through Git issues | Through Git issues | Through Git issues |
 | **Compiler** | Java (Native binary) | Ruby | Python |
 | **Limitation** | Quadratic runtime for generating files (e.g., [IDSM](https://idsm.elixir-czech.cz/), [OrthoDB](https://www.orthodb.org/)); Not applicable for shape subclasses (e.g., In [Rhea](https://www.rhea-db.org/), where compounds are sub-classified into products, reactants, etc.) | Requires manual curation of input (Potential solution: integrate with VoID generators for semi-automation) | Some unexpected results |
