@@ -100,7 +100,7 @@ A number of data schema extractors exist. In this biohackathon, we looked at thr
 | **Error logging** | Errors are not easily readable | Errors are not easily readable or vague error logs | Errors are not readable or understandable; large images may be truncated |
 | **Error reporting** | Through Git issues | Through Git issues | Through Git issues |
 | **Compiler** | Java (Native binary) | Ruby | Python |
-| **Limitation** | Quadratic runtime for generating files (e.g., [IDSM](https://idsm.elixir-czech.cz/), [OrthoDB](https://www.orthodb.org/)); Not applicable for shape subclasses (e.g., In [Rhea](https://www.rhea-db.org/), where compounds are sub-classified into products, reactants, etc.) | Requires manual curation of input (Potential solution: integrate with VoID generators for semi-automation) | Some unexpected results |
+| **Limitation** | Quadratic runtime for generating files (e.g., [IDSM](https://idsm.elixir-czech.cz/), [OrthoDB](https://www.orthodb.org/)); Not applicable for shape subclasses (e.g., In [Rhea](https://www.rhea-db.org/), where compounds are sub-classified into products, reactants, etc.) | Requires manual curation of input (Potential solution: integrate with VoID generators for semi-automation) | The current algorithm is unable to detect specific patterns within the data; however, the developers are aware of this limitation. |
 
 ## Utilizing the schema tools
 
