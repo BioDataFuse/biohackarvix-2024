@@ -15,11 +15,11 @@ authors:
     orcid: 0000-0001-7883-3756
     affiliation: 
   - name: Toshiaki Katayama
-    orcid: 	ktym@dbcls.jp	ktym
-    affiliation:
+    orcid: 0000-0003-2391-0384
+    affiliation: 5
   - name: Jerven Bolleman
-    orcid: 
-    affiliation: 
+    orcid: 0000-0002-7449-1266
+    affiliation: 6
   - name: Dominik Martinat
     orcid: 0000-0001-6611-7883
     affiliation: 
@@ -37,6 +37,10 @@ affiliations:
     index: 1
   - name: Fraunhofer Institute for Translational Medicine and Pharmacology, Germany
     index: 4
+  - name:  Database Center for Life Science, Joint Support - Center for Data Science Research, Research Organization
+    index: 5
+  - name: Swiss-Prot group, Swiss Institute of Bioinformatics, Switzerland
+    index: 6
 date: 12 November 2024
 cito-bibliography: paper.bib
 event: BH24EU
