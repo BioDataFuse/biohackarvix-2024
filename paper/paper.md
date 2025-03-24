@@ -32,6 +32,9 @@ authors:
   - name: Tooba Abbassi-Daloii*
     orcid: 0000-0002-4904-3269
     affiliation: 1
+  - name: Jose Emilio Labra Gayo
+    orcid: 0000-0001-8907-5348
+    affiliation: 7
 affiliations:
   - name: Department of Translational Genomics, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, the Netherlands; 
     index: 1
@@ -41,6 +44,8 @@ affiliations:
     index: 5
   - name: Swiss-Prot group, Swiss Institute of Bioinformatics, Switzerland
     index: 6
+  - name: University of Oviedo, Spain
+    index: 7  
 date: 12 November 2024
 cito-bibliography: paper.bib
 event: BH24EU
