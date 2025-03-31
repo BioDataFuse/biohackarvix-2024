@@ -25,7 +25,7 @@ authors:
     affiliation: 4
   - name: Harald Detering
     orcid: 0000-0002-0134-7618
-    affiliation:
+    affiliation: 5
   - name: Jose Emilio Labra Gayo
     orcid: 0000-0001-8907-5348
     affiliation: 6
@@ -39,14 +39,15 @@ authors:
 affiliations:
   - name: Department of Translational Genomics, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, the Netherlands; 
     index: 1
-  - name: Fraunhofer Institute for Translational Medicine and Pharmacology, Germany
-    index: 7
   - name:  Database Center for Life Science, Joint Support - Center for Data Science Research, Research Organization
     index: 2
   - name: Swiss-Prot group, Swiss Institute of Bioinformatics, Switzerland
     index: 3
   - name: University of Oviedo, Spain
-    index: 6  
+    index: 6
+  - name: Fraunhofer Institute for Translational Medicine and Pharmacology, Germany
+    index: 7
+
 date: 12 November 2024
 cito-bibliography: paper.bib
 event: BH24EU
