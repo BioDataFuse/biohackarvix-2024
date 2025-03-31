@@ -25,16 +25,17 @@ authors:
     affiliation: 
   - name: Harald Detering
     orcid: 0000-0002-0134-7618
-    affiliation: 
+    affiliation:
+  - name: Jose Emilio Labra Gayo
+    orcid: 0000-0001-8907-5348
+    affiliation: 7
   - name: Yojana Gadiya*
     orchid: 0000-0002-7683-0452
     affiliation: 4
   - name: Tooba Abbassi-Daloii*
     orcid: 0000-0002-4904-3269
     affiliation: 1
-  - name: Jose Emilio Labra Gayo
-    orcid: 0000-0001-8907-5348
-    affiliation: 7
+
 affiliations:
   - name: Department of Translational Genomics, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, the Netherlands; 
     index: 1
