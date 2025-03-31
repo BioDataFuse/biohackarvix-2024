@@ -13,25 +13,25 @@ authors:
     affiliation: 1
   - name: Shuichi Kawashima
     orcid: 0000-0001-7883-3756
-    affiliation: 
+    affiliation: 2
   - name: Toshiaki Katayama
     orcid: 0000-0003-2391-0384
-    affiliation: 5
+    affiliation: 2
   - name: Jerven Bolleman
     orcid: 0000-0002-7449-1266
-    affiliation: 6
+    affiliation: 3
   - name: Dominik Martinat
     orcid: 0000-0001-6611-7883
-    affiliation: 
+    affiliation: 4
   - name: Harald Detering
     orcid: 0000-0002-0134-7618
     affiliation:
   - name: Jose Emilio Labra Gayo
     orcid: 0000-0001-8907-5348
-    affiliation: 7
+    affiliation: 6
   - name: Yojana Gadiya*
     orchid: 0000-0002-7683-0452
-    affiliation: 4
+    affiliation: 7
   - name: Tooba Abbassi-Daloii*
     orcid: 0000-0002-4904-3269
     affiliation: 1
@@ -40,13 +40,13 @@ affiliations:
   - name: Department of Translational Genomics, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, the Netherlands; 
     index: 1
   - name: Fraunhofer Institute for Translational Medicine and Pharmacology, Germany
-    index: 4
+    index: 7
   - name:  Database Center for Life Science, Joint Support - Center for Data Science Research, Research Organization
-    index: 5
+    index: 2
   - name: Swiss-Prot group, Swiss Institute of Bioinformatics, Switzerland
-    index: 6
+    index: 3
   - name: University of Oviedo, Spain
-    index: 7  
+    index: 6  
 date: 12 November 2024
 cito-bibliography: paper.bib
 event: BH24EU
