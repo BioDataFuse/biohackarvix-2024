@@ -52,10 +52,11 @@ date: 12 November 2024
 cito-bibliography: paper.bib
 event: BH24EU
 biohackathon_name: "BioHackathon Europe 2024"
-biohackathon_url: "https://BioHackathon-europe.org/"
+biohackathon_url: "https://biohackathon-europe.org/"
 biohackathon_location: "Barcelona, Spain, 2024"
 group: Project 18
 # URL to project git repo --- should contain the actual paper.md:
+# TODO: should be renamed to biohackrxiv-2024
 git_url: https://github.com/BioDataFuse/biohackarvix-2024/
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
@@ -123,7 +124,7 @@ SheXer as a tool enables quality assurance of the underlying graph by checking c
 
 ## Utilizing the schema tools
 
-As shown in **Table 1**, each of the data schema tools is written in different programming languages. To enable easy use of these tools with minimal interpreter changes, we built a docker environment and detailed step-by-step documentation on the utility of these tools with a locally deployed graph. The documentation is available on [Github](https://github.com/BioDataFuse/elixir_BioHackathon_2024/tree/main/void2rdf-config#readme) and discussed in detail in the later sections.
+As shown in **Table 1**, each of the data schema tools is written in different programming languages. To enable easy use of these tools with minimal interpreter changes, we built a docker environment and detailed step-by-step documentation on the utility of these tools with a locally deployed graph. The documentation is available on [Github](https://github.com/BioDataFuse/elixir_biohackathon_2024/tree/main/void2rdf-config#readme) and discussed in detail in the later sections.
 
 # Facilitating the addition of new annotators to *pyBiodatafuse*
 
