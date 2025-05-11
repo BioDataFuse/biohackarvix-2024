@@ -37,7 +37,7 @@ authors:
     affiliation: 1
 
 affiliations:
-  - name: Department of Translational Genomics, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, the Netherlands; 
+  - name: Department of Translational Genomics, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, the Netherlands
     index: 1
   - name:  Database Center for Life Science, Joint Support - Center for Data Science Research, Research Organization
     index: 2
@@ -52,16 +52,17 @@ date: 12 November 2024
 cito-bibliography: paper.bib
 event: BH24EU
 biohackathon_name: "BioHackathon Europe 2024"
-biohackathon_url:   "https://biohackathon-europe.org/"
+biohackathon_url: "https://biohackathon-europe.org/"
 biohackathon_location: "Barcelona, Spain, 2024"
 group: Project 18
 # URL to project git repo --- should contain the actual paper.md:
+# TODO: should be renamed to biohackrxiv-2024
 git_url: https://github.com/BioDataFuse/biohackarvix-2024/
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
 authors_short: Abbassi-Daloii, T., Gadiya, Y. \emph{et al.}
 ---
-	
+
 #### corresponding authors: t.abbassidaloii\@maastrichtuniversity.nl and yojana.gadiya\@itmp.fraunhofer.de
 
 #### * These authors contributed equally to this work
@@ -70,13 +71,13 @@ authors_short: Abbassi-Daloii, T., Gadiya, Y. \emph{et al.}
 
 The integration of life science data across diverse biomedical resources remains a significant challenge, due to fragmented data sources, varying data formats, and the use of multiple ontologies to describe similar contexts. To address these issues, we launched the [BioDataFuse (BDF) project](https://biodatafuse.org) [@AuthorSelfCitation:biodatafuse2023], which applies a modular framework to harmonize and integrate data from various sources into context-specific knowledge graphs. To date, the BDF project has successfully integrated and harmonized data from ten databases, demonstrating the effectiveness of BDF's modular approach in creating unified and interoperable datasets.
 
-However, achieving this level of integration requires a deep understanding of the underlying graph schemas from each data source. In this biohackathon, our goal was to refine further and streamline the data integration process, aiming to make it more seamless, adaptable, automatized, and FAIR-compliant. By creating a robust approach, we envision that any biological database adhering to FAIR principles could be readily integrated into the BDF framework and contribute to a unified data ecosystem.
+However, achieving this level of integration requires a deep understanding of the underlying graph schemas from each data source. In this BioHackathon, our goal was to refine further and streamline the data integration process, aiming to make it more seamless, adaptable, automatized, and FAIR-compliant. By creating a robust approach, we envision that any biological database adhering to FAIR principles could be readily integrated into the BDF framework and contribute to a unified data ecosystem.
 
-## Goals for the biohackathon
+## Goals for the BioHackathon
 
-Our main objective for this biohackathon was to enhance FAIR data integration by clarifying and transforming graph schemas. To achieve this, we outlined the following tasks:
+Our main objective for this BioHackathon was to enhance FAIR data integration by clarifying and transforming graph schemas. To achieve this, we outlined the following tasks:
 
-- Compare and document the synergies among various tools for extracting data models, including RDF-Config, VoID generator, and sheXer.
+- Compare and document the synergies among various tools for extracting data models, including RDF-config, VoID generator, and sheXer.
 - Translate schemas into annotators to enable future automation.
 
 We also aimed to extend the capabilities of BioDataFuse by:
@@ -88,11 +89,11 @@ We also aimed to extend the capabilities of BioDataFuse by:
 
 ## Selection of schema extract tools
 
-A number of data schema extractors exist. In this biohackathon, we looked at three such extraction tools: VoID-generator, RDF-Config, and sheXer **(Figure 1)**.
+A number of data schema extractors exist. In this BioHackathon, we looked at three such extraction tools: VoID-generator, RDF-config, and sheXer **(Figure 1)**.
 
 - [VoID-generator](https://github.com/JervenBolleman/void-generator): The tool enables the generation of [Vocabulary of Interlinked Datasets (VoID)](https://www.w3.org/TR/void/) files from an RDF turtle file or a SPARQL endpoint. VoID is a metadata expression language for RDF graphs and allows for efficiently describing the distribution of data elements and their links in an RDF graph. Hence, by generating such VoID files, the VoID-generator tool enabled making the data and metadata around the graphs discoverable and interoperable.
 
-- [RDF-Config](https://github.com/dbcls/rdf-config): It is a tool to describe and visualize the RDF data structure in a human-readable format based on high quality manual curation of underlying data models. This tool enables making a structured representation of the underlying graph, thus allowing for RDF data management across resources.
+- [RDF-config](https://github.com/dbcls/rdf-config): It is a tool to describe and visualize the RDF data structure in a human-readable format based on high quality manual curation of underlying data models. This tool enables making a structured representation of the underlying graph, thus allowing for RDF data management across resources.
 
 - [sheXer](https://github.com/DaniFdezAlvarez/shexer): It is a library to automatic extract of [shape expressions (ShEx)](https://shex.io/) or [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/) from an RDF graph or SPARQL endpoint.
 ShEx is a concise and human-readable schema language for RDF,
@@ -102,24 +103,23 @@ SheXer as a tool enables quality assurance of the underlying graph by checking c
 ![Data model overview](../images/Dataschemas-biohack24.png)
 <center>
 
-**Figure 1: Understanding the utility of different.** Here we focused on VoID-generator, RDF-Config, and sheXer with their conversion directly from the RDF resource into a data model. Additionally, we used a tool to convert the VoID file to RDF-Config compliant files for data modeling.
+**Figure 1: Understanding the utility of tools.** Here we focused on VoID-generator, RDF-config, and sheXer with their conversion directly from the RDF resource into a data model. Additionally, we used a tool to convert the VoID file to RDF-config compliant files for data modeling.
 
 </center>
 
 ## Table 1. Pros and Cons of the schema tools
 
-|  | [VoID generator](https://github.com/JervenBolleman/void-generator) | [RDF-Config](https://github.com/JervenBolleman/void-generator) | [sheXer](https://github.com/JervenBolleman/void-generator) |
+|  | [VoID generator](https://github.com/JervenBolleman/void-generator) | [RDF-config](https://github.com/dbcls/rdf-config) | [sheXer](https://github.com/DaniFdezAlvarez/shexer) |
 |---|---|---|---|
-| **Overview of the tool** | Extracts statistics from an RDF endpoint or file | Automates SPARQL and schema generation; creates a GraphQL instance of an RDF graph | Extracts ShEx and SHACL structure from an RDF graph; ensure quality assurance and rule compliance of a graph |
-| **Documentation** | [Incomplete](https://github.com/JervenBolleman/void-generator/blob/main/Tutorial.md) | [Present](https://github.com/JervenBolleman/void-generator/blob/main/Tutorial.md) | [Present](https://github.com/DaniFdezAlvarez/shexer/blob/master/README.md) |
-| **Minimal requirement** | Requires an RDF file or SPARQL endpoint; Graph must have triples with `rdf:type` predicates | Requires `Model.yaml` and `Prefix.yaml` files | Requires a Turtle file or a SPARQL endpoint |
-| **Data model representation** | Object class-based file detailing all classes and properties | Tree structure representing classes and properties which can be exported as SVG | A SHACL or ShEx schema, optionally a UML diagram in PNG representing the shape graph |
+| **Overview of the tool** | Extracts statistics from an RDF endpoint or a file | Automates SPARQL and schema diagram generation | Extracts ShEx and SHACL structure from an RDF graph |
+| **Documentation** | [Incomplete](https://github.com/JervenBolleman/void-generator/blob/main/Tutorial.md) | [Present](https://github.com/dbcls/rdf-config/tree/master/doc) | [Present](https://github.com/DaniFdezAlvarez/shexer/blob/master/README.md) |
+| **Minimal requirement** | Requires an RDF file or SPARQL endpoint; Graph must have triples with `rdf:type` predicates | Requires manually curated `model.yaml` and `prefix.yaml` files | Requires a Turtle file or a SPARQL endpoint |
+| **Data model representation** | Object class-based file detailing all classes and properties | A set of tree structures representing classes and properties in YAML which can be exported as SVG | A SHACL or ShEx schema, optionally a UML diagram in PNG representing the shape graph |
 | **Process** | Automated | Semi-automated | Automated, and optionally one can change the threshold used to accept patterns in the graph as shapes and I/O settings |
-| **Interpretability of schema representation** | Difficult; requires programming knowledge to understand organization of classes and properties | Easy; human-readable terms make the tree structure representation easily understandable | Easy; graphical representation facilitates quick interpretation |
-| **Ontology representation in schema** | Human-readable terms (mapping ontology to labels); more compatible with programming language formats | Human-readable terms | The diagrams and graphs are rendered with their URIs and no labels, difficulting interpretability |
-| **Error logging** | Errors are not easily readable | Errors are not easily readable or vague error logs | Errors are not readable or understandable |
+| **Interpretability** | Difficult; requires programming knowledge to understand organization of classes and properties | Easy; human-readable terms and graphical representation make the graph structure easily understandable | Easy; graphical representation facilitates quick interpretation |
+| **Readability** | Human-readable terms (mapping ontology to labels); more compatible with programming language formats | Human-readable terms assigned for classes and properties | The diagrams and graphs are rendered with their URIs and no labels |
 | **Error reporting** | Through Git issues | Through Git issues | Through Git issues |
-| **Compiler** | Java (Native binary) | Ruby | Python |
+| **Implementation** | Java (Native binary) | Ruby | Python |
 | **Limitation** | Quadratic runtime for generating files (e.g., [IDSM](https://idsm.elixir-czech.cz/), [OrthoDB](https://www.orthodb.org/)); Not applicable for shape subclasses (e.g., In [Rhea](https://www.rhea-db.org/), where compounds are sub-classified into products, reactants, etc.) | Requires manual curation of input (Potential solution: integrate with VoID generators for semi-automation, for which a prototype exists) | The current algorithm is unable to detect specific patterns within the data; however, the developers are aware of this limitation. |
 
 ## Utilizing the schema tools
@@ -130,24 +130,11 @@ As shown in **Table 1**, each of the data schema tools is written in different p
 
 ## Semi-automating annotation building with data schemas
 
-To extend [pyBiodatafuse](https://github.com/BioDataFuse/pyBiodatafuse.git)’s functionality and support ongoing alignment with related projects, we identified a valuable integration opportunity with [**Biohackathon Project #14**](). This project discussed the generation of a tool named [sparql-void-to-python tool](https://github.com/TRIPLE-CHIST-ERA/sparql-void-to-python.git) which utilizes the VoID file to automatically generate Python APIs that include all classes and properties within an RDF database and we contacted the authors of [rudof](https://rudof-project.github.io/) which are implementing a similar feature.
+To extend [pyBiodatafuse](https://github.com/BioDataFuse/pyBiodatafuse.git)’s functionality and support ongoing alignment with related projects, we identified a valuable integration opportunity with [**BioHackathon Project #14**](). This project developed a tool named [sparql-void-to-python tool](https://github.com/TRIPLE-CHIST-ERA/sparql-void-to-python.git) which utilizes the VoID file to automatically generate Python APIs that include all classes and properties within an RDF database and we collaborated the authors of [rudof](https://rudof-project.github.io/) which are implementing a similar feature.
 
 Building on this capability, we developed a "generic" template that enables the streamlined addition of new annotators to *pyBiodatafuse* (available on [Github](https://github.com/BioDataFuse/pyBiodatafuse/blob/main/src/pyBiodatafuse/annotators/rdf_annotator_template.py)). This template leverages information provided by the Python API from the sparql-void-to-python tool to facilitate the creation of database-specific annotators directly within the BDF framework. By adopting this approach, we anticipate simplifying and fast onboarding the integration of new RDF databases into BDF, making the process more efficient and consistent across different data sources.
 
-# Using LLM to query a BDF knowledge graph
-
-Project #4 identified the potential of using custom LLMs, fine-tuned to generate SPARQL queries for open data endpoints, as a means to bridge the gap between data consumers and RDF datasets. In order to reduce errors, produce better queries and ensure compatibility with each database schema, the models can be fine-tuned with the shapes or schemas of these databases in SHACL or ShEx format, as well as with sets of SPARQL-natural language queries.  # Not a lot more to say here...
-
-## Evaluating the scope of GraphQL interface for RDF Portal (@Toshiaki)
-
-Add info here on work done
-
-Overall, the capability to integrate the GraphQL to RDF-Portal opens several opportunities:
-
-- Enabling performing federated queries within the 150 or more data sources in RDF-Portal
-- Opening a plugin support for BDF ingestion, expanding its querying capabilities
-
-# Improvement of *pyBiodatafuse*
+## Improvement of *pyBiodatafuse*
 
 As part of ongoing efforts to enhance BioDataFuse, some improvements were made during the week:
 
@@ -155,15 +142,39 @@ As part of ongoing efforts to enhance BioDataFuse, some improvements were made d
 - **Optimized Bgee queries**: With SPARQL experts and Bgee developers, we were able to improve the efficiency of Bgee queries, reducing the query time significantly and enhancing overall performance.
 - **Validation of BDF graph**: With data schema tools, we were able to quality check the BDF graph schema and assess the overall quality of our generated RDF graph. The current implementation of the `BDFGraph()` class wraps `shexer` methods to generate both ShEx and SHACL graphs representing its schema, as showcased in the [example workflow notebook]().
 
-# Improvement of *RDF-Portal* (@Toshiaki and @Shuichi)
+## Improvement of *RDF Portal*
+
+The [RDF Portal](http://rdfportal.org/) [@AuthorSelfCitation:rdfportal], operated by the Database Center for Life Science (DBCLS) in Japan, is a repository of knowledge graphs in life sciences that hosts over 60 key bioinformatics databases and ontologies. In this BioHackathon, we explored methods to enable the use of RDF Portal data within the BDF framework. By leveraging RDF-config, SPARQL queries corresponding to each dataset in the RDF Portal can be automatically generated. Moreover, RDF-config can produce configuration files for [Grasp](http://github.com/dbcls/grasp/), a tool developed by DBCLS that exposes SPARQL endpoints as a GraphQL interface.
+
+We created concise `model.yaml` configuration files for selected databases to be used with RDF-config, and subsequently constructed a [GraphQL endpoint](https://dx.dbcls.jp/eubh24/grasp) for this BioHackathon using Grasp. Although individual RDF datasets often have highly complex schemas, this curated GraphQL endpoint allows for intuitive cross-database queries through simplified syntax. For example:
+
+```
+query {
+  ChEMBL(id: "CHEMBL941") {
+    label
+    smiles
+    atc
+    alogp
+    pchembl
+    ChEBI {
+      charge
+    }
+    UniProt {
+      mnemonic
+      label
+      organism
+    }
+  }
+}
+```
+
+This effort lays the groundwork for opening plugin support for BDF ingestion and expanding its querying capabilities.
 
 # Discussion
 
-@Toshiaki please review:
+In this work, we identified the importance of establishing standards for identifiers and data schemas to enable the seamless integration of multiple databases. A key challenge lies in developing interoperable and widely applicable data models, which requires not only technical solutions but also collaborative efforts among domain experts. To address this, we emphasize the need to foster a community of specialists in data schema modeling who can collaboratively define best practices and contribute to the evolution of shared standards. Furthermore, we found that enriching data schema models with clear descriptions for classes and properties significantly enhances the interpretability of the schema—an aspect that becomes increasingly important in the context of large language model (LLM) applications.
 
-- The importance of defining a standard format for identifiers
-- Creating a community of experts in data schema modeling to explore and define best practices and standards when creating interoperable and widely applicable data models
-- Adding descriptions to classes and properties in a data schema model improves accurate interpretation of the schema
+Project #4 highlighted the potential of using custom LLMs, fine-tuned to generate SPARQL queries for open data endpoints, as a promising approach to bridge the gap between data consumers and RDF-based resources. In order to minimize errors and improve the quality of generated queries, such models can be fine-tuned using formal schema representations, such as SHACL or ShEx, along with curated pairs of SPARQL and natural language queries. This strategy not only increases compatibility with individual datasets but also lays the groundwork for scalable, intelligent query interfaces for semantic web resources.
 
 # Future Work
 
@@ -185,7 +196,7 @@ With the successful building and understanding of schema alongside cross-project
 
 - **LLM integration**: By collaborating with [Tarcisio Mendes De Farias]() (Project #4) to enhance knowledge graph interpretability and usability for a wider range of applications with LLM. Specifically, converting natural language to SPARQL queries for the context-specific BDF graph, allowing a chatbot plugin on our graph.
 
-### Integration with RDF-Portal
+### Integration with RDF Portal
 
 - **Using GraphQL interface**: Being the downstream users of the GraphQL interface, we would collaborate with [Toshiaki Katayama]() and [Shuichi Kawashima]() to explore opportunities to build annotators in BDF for RDF Portal.
 
