@@ -25,13 +25,13 @@ authors:
     affiliation: 4
   - name: Harald Detering
     orcid: 0000-0002-0134-7618
-    affiliation: 5
+    affiliation: 3
   - name: Jose Emilio Labra Gayo
     orcid: 0000-0001-8907-5348
-    affiliation: 6
+    affiliation: 5
   - name: Yojana Gadiya*
     orchid: 0000-0002-7683-0452
-    affiliation: 7
+    affiliation: 6
   - name: Tooba Abbassi-Daloii*
     orcid: 0000-0002-4904-3269
     affiliation: 1
@@ -39,14 +39,16 @@ authors:
 affiliations:
   - name: Department of Translational Genomics, NUTRIM Institute of Nutrition and Translational Research in Metabolism, Maastricht University, the Netherlands
     index: 1
-  - name:  Database Center for Life Science, Joint Support - Center for Data Science Research, Research Organization
+  - name: Database Center for Life Science, Joint Support-Center for Data Science Research, Research Organization of Information and Systems, Kashiwa, Japan
     index: 2
-  - name: Swiss-Prot group, Swiss Institute of Bioinformatics, Switzerland
+  - name: SIB Swiss Institute of Bioinformatics, Lausanne, Switzerland
     index: 3
+  - name: Department of Physical Chemistry, Faculty of Science, Palacky University Olomouc, CZ
+    index: 4
   - name: University of Oviedo, Spain
-    index: 6
+    index: 5
   - name: Fraunhofer Institute for Translational Medicine and Pharmacology, Germany
-    index: 7
+    index: 6
 
 date: 12 November 2024
 cito-bibliography: paper.bib
